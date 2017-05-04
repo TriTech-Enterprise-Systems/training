@@ -9,7 +9,8 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="assets/favicon.ico">
+    <link rel="icon" href="http://tritechenterprise.com/wp-content/uploads/2017/02/icon-75x75.png" sizes="32x32" />
+    <link rel="icon" href="http://tritechenterprise.com/wp-content/uploads/2017/02/icon.png" sizes="192x192" />
 
     <title>Team Kanban Practitioner Training from TriTech Enterprise Systems, Inc.</title>
 
@@ -122,6 +123,7 @@
     }
 
 		.course-description {
+      /* position: relative; */
 			/* 
 			display:flex;
 			align-items:center;
@@ -258,6 +260,12 @@
       margin-top:1em;
     }
 
+    .right {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+
     </style>
   </head>
 
@@ -298,8 +306,7 @@
     <!--</div>-->
 
     <div class="container course-description">
-      <!-- Example row of columns -->
-		<div class="row">
+      <div class="row">
 			<div class="col-md-8 course-body">
         <!--<p>The Team Kanban Practitioner course teaches the basics of the Kanban Method and serves as the entry level and starting point to an “alternative path to agility.”</p>-->
 
@@ -328,101 +335,32 @@
 
         <p>Within a month after attending the program, you will have a one-on-one follow-up session with a TriTech Kanban Coaching Professional. He or she will help you maximize the momentum and energy generated during the program. Together, you will discuss how to apply and integrate the concepts you learned.</p>
 			</div>
-      <div class="col-md-4 course-body">
-        <h2>Classes</h2> 
-        <div class="course col-md-12">
-          <div class="row course-details">
-            <div class="col-md-12">
-              <h3>Washington, D.C.</h3>
+      <div class="col-md-4 course-body ">
+          <h2>Classes</h2> 
+          <div class="course col-md-12">
+            <div class="row course-details">
+              <div class="col-md-12">
+                <h3>Washington, D.C.</h3>
+              </div>
+              <div class="col-md-12">
+                1110 Vermont Avenue NW, Suite 700<br />
+                June 21, 2017<br />
+                8:30 am – 5:00 pm<br />
+              </div>
             </div>
-            <div class="col-md-12">
-              1110 Vermont Avenue NW, Suite 700<br />
-              June 21, 2017<br />
-              8:30 am – 5:00 pm<br />
+            <form action="" method="post">
+            <div class="row">
+              <input type="radio" name="registration" id="early-bird" value="early-bird"> <label for="early-bird">Early Bird - $799</label> <em>Sold Out</em><br />
+              <input type="radio" name="registration" id="non-profit" value="non-profit"> <label for="non-profit">Non-Profit/Education - $899</label><br />
+              <input type="radio" name="registration" id="professional" value="professional" checked="checked"> <label for="professional">Professional - $999</label><br />
+              <button type="submit" name="submit" class="register btn btn-primary">Register</button>
             </div>
+            </form>
           </div>
-          <form action="" method="post">
-          <div class="row">
-            <input type="radio" name="registration" id="early-bird" value="early-bird"> <label for="early-bird">Early Bird - $799</label> <em>Sold Out</em><br />
-            <input type="radio" name="registration" id="non-profit" value="non-profit"> <label for="non-profit">Non-Profit/Education - $899</label><br />
-            <input type="radio" name="registration" id="professional" value="professional" checked="checked"> <label for="professional">Professional - $999</label><br />
-            <button type="submit" name="submit" class="register btn btn-primary">Register</button>
-          </div>
-          </form>
-        </div>
-      <!--
-      <div class="row course-prices vertical-align">
-         
-          <div class="col-md-8">Non-Profit/Higher Education</div>
-          <div class="col-md-2 price">$899</div>
-          <div class="col-md-2"><a class="btn btn-primary" href="#" role="button">
-            Register
-          </a></div>
+      </div>     
 
-      </div>
-      <div class="row course-prices vertical-align">
-         
-          <div class="col-md-8">Professional</div>
-          <div class="col-md-2 price">$999</div>
-          <div class="col-md-2"><a class="btn btn-primary" href="#" role="button">
-            Register
-          </a></div>
 
-      </div>
-      -->      
     </div>
-
-      </div>
-      <!--
-    <div class="container course-listing">
-        <!-- Example row of columns >
-      <div class="row">
-        <h1 id="classes">Classes</h1>
-      </div>
-      <div class="row course-venue relative washington-dc">
-          <div class="col-md-12 vertical-align-bottom-left">
-            <h2>Washington, D.C.</h2>
-          </div>
-      </div>
-      <div class="row course-details">
-          <div class="col-md-6 course-date-time">
-            June 21, 2017<br />
-            8:30 am – 5:00 pm
-          </div>
-          <div class="col-md-6 course-venue-details">
-            1110 Vermont Avenue NW, Suite 700<br />
-            Washington, D.C. 20005
-          </div>
-      </div>
-      <div class="row course-prices first vertical-align">
-
-          <div class="col-md-8">Early Bird</div>
-          <div class="col-md-2"></div>
-          <div class="col-md-2"><a class="btn btn-default disabled" href="#" role="button">
-            Sold Out
-          </a></div>
-
-      </div>
-      <div class="row course-prices vertical-align">
-         
-          <div class="col-md-8">Non-Profit/Higher Education</div>
-          <div class="col-md-2 price">$899</div>
-          <div class="col-md-2"><a class="btn btn-primary" href="#" role="button">
-            Register
-          </a></div>
-
-      </div>
-      <div class="row course-prices vertical-align">
-         
-          <div class="col-md-8">Professional</div>
-          <div class="col-md-2 price">$999</div>
-          <div class="col-md-2"><a class="btn btn-primary" href="#" role="button">
-            Register
-          </a></div>
-
-      </div>
-    </div>
--->
     <div class="container ending">
       <footer>
       	<div class="col-md-12 "><img src="assets/images/tritech_logo_gray.png" class="imprint" width="87"/></div>
@@ -442,9 +380,9 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
      <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-    <script src="../../assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+    <script src="assets/js/ie10-viewport-bug-workaround.js"></script>
     <script src="assets/js/ga.js"></script>
   </body>
 </html>
