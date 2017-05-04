@@ -177,13 +177,13 @@
     }
 
 		.border { border:1px solid #000; }
+/*
 
     .course-listing h1 {
       text-align:center;
       padding-bottom:.5em;
       border-bottom:3px dotted #083B84;
     }
-
     .course-body li {
       margin:.75em auto .75em auto;
     }
@@ -244,6 +244,20 @@
       border-top: none;
     }
 
+    .course-price {
+      border: 1px solid;
+      margin: .2em;
+    }
+*/
+    .course, .course form{
+      background:#ddd;
+      padding:1em;
+    }
+
+    .course .register {
+      margin-top:1em;
+    }
+
     </style>
   </head>
 
@@ -278,7 +292,7 @@
       	<div class="col-md-8 col-md-offset-2 inverted">
 	        <h1>Team Kanban<br />Practitioner</h1>
 	        <p class="lead">Get your feet on the ground with this introductory course into the Kanban Method. Learn what it means to do “Kanban”. You’ll leave with a clear picture for how to get started with your own Kanban.</p>
-          <p><a class="btn btn-default text-uppercase" href="#classes" role="button">Browse Classes</a></p>
+          <!--<p><a class="btn btn-default text-uppercase" href="#classes" role="button">Browse Classes</a></p>-->
 	    </div>
       </div>
     <!--</div>-->
@@ -287,7 +301,7 @@
       <!-- Example row of columns -->
 		<div class="row">
 			<div class="col-md-8 course-body">
-        <p>The Team Kanban Practitioner course teaches the basics of the Kanban Method and serves as the entry level and starting point to an “alternative path to agility.”</p>
+        <!--<p>The Team Kanban Practitioner course teaches the basics of the Kanban Method and serves as the entry level and starting point to an “alternative path to agility.”</p>-->
 
         <h2>What you can expect</h2>
 
@@ -314,10 +328,54 @@
 
         <p>Within a month after attending the program, you will have a one-on-one follow-up session with a TriTech Kanban Coaching Professional. He or she will help you maximize the momentum and energy generated during the program. Together, you will discuss how to apply and integrate the concepts you learned.</p>
 			</div>
-		</div>
+      <div class="col-md-4 course-body">
+        <h2>Classes</h2> 
+        <div class="course col-md-12">
+          <div class="row course-details">
+            <div class="col-md-12">
+              <h3>Washington, D.C.</h3>
+            </div>
+            <div class="col-md-12">
+              1110 Vermont Avenue NW, Suite 700<br />
+              June 21, 2017<br />
+              8:30 am – 5:00 pm<br />
+            </div>
+          </div>
+          <form action="" method="post">
+          <div class="row">
+            <input type="radio" name="registration" id="early-bird" value="early-bird"> <label for="early-bird">Early Bird - $799</label> <em>Sold Out</em><br />
+            <input type="radio" name="registration" id="non-profit" value="non-profit"> <label for="non-profit">Non-Profit/Education - $899</label><br />
+            <input type="radio" name="registration" id="professional" value="professional" checked="checked"> <label for="professional">Professional - $999</label><br />
+            <button type="submit" name="submit" class="register btn btn-primary">Register</button>
+          </div>
+          </form>
+        </div>
+      <!--
+      <div class="row course-prices vertical-align">
+         
+          <div class="col-md-8">Non-Profit/Higher Education</div>
+          <div class="col-md-2 price">$899</div>
+          <div class="col-md-2"><a class="btn btn-primary" href="#" role="button">
+            Register
+          </a></div>
 
+      </div>
+      <div class="row course-prices vertical-align">
+         
+          <div class="col-md-8">Professional</div>
+          <div class="col-md-2 price">$999</div>
+          <div class="col-md-2"><a class="btn btn-primary" href="#" role="button">
+            Register
+          </a></div>
+
+      </div>
+      -->      
+    </div>
+
+      </div>
+      <!--
     <div class="container course-listing">
-        <!-- Example row of columns -->
+        <!-- Example row of columns >
       <div class="row">
         <h1 id="classes">Classes</h1>
       </div>
@@ -364,7 +422,7 @@
 
       </div>
     </div>
-
+-->
     <div class="container ending">
       <footer>
       	<div class="col-md-12 "><img src="assets/images/tritech_logo_gray.png" class="imprint" width="87"/></div>
@@ -387,5 +445,6 @@
     <script src="../../assets/js/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+    <script src="assets/js/ga.js"></script>
   </body>
 </html>
