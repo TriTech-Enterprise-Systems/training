@@ -311,56 +311,103 @@
       <div class="row">
         <div class="col-md-8 course-body ">
             <h2>Inquire Now</h2> 
-            <div class=" col-md-12">
-              <div class="row ">
-                <div class="col-md-12">
-                  <!-- Note :
-   - You can modify the font style and form style to suit your website. 
-   - Code lines with comments “Do not remove this code”  are required for the form to work properly, make sure that you do not remove these lines of code. 
-   - The Mandatory check script can modified as to suit your business needs. 
-   - It is important that you test the modified form before going live.-->
-<div id='crmWebToEntityForm' style='width:600px;margin:auto;'>
-   <META HTTP-EQUIV ='content-type' CONTENT='text/html;charset=UTF-8'>
-   <form action='https://crm.zoho.com/crm/WebToLeadForm' name=WebToLeads2428813000000137003 method='POST' onSubmit='javascript:document.charset="UTF-8"; return checkMandatory()' accept-charset='UTF-8'>
+           
+            <div id="crmWebToEntityForm" class="offset-col-md-2">
+               <form action='https://crm.zoho.com/crm/WebToLeadForm' name=WebToLeads2428813000000137003 method='POST' onSubmit='javascript:document.charset="UTF-8"; return checkMandatory()' accept-charset='UTF-8'>
 
-   <!-- Do not remove this code. -->
-  <input type='text' style='display:none;' name='xnQsjsdp' value='b77a9c24fdc7cc06bf8b2a1d5f34b9d0f6c6271d0073bbb9d5d8979631781903'/>
-  <input type='hidden' name='zc_gad' id='zc_gad' value=''/>
-  <input type='text' style='display:none;' name='xmIwtLD' value='de91cd1bb2c155d15590a2329280e80fc4e508f38078efe3c19474e140729cf9'/>
-  <input type='text' style='display:none;'  name='actionType' value='TGVhZHM='/>
+               <!-- Do not remove this code. -->
+              <input type='text' style='display:none;' name='xnQsjsdp' value='b77a9c24fdc7cc06bf8b2a1d5f34b9d0f6c6271d0073bbb9d5d8979631781903'/>
+              <input type='hidden' name='zc_gad' id='zc_gad' value=''/>
+              <input type='text' style='display:none;' name='xmIwtLD' value='de91cd1bb2c155d15590a2329280e80fc4e508f38078efe3c19474e140729cf9'/>
+              <input type='text' style='display:none;'  name='actionType' value='TGVhZHM='/>
 
-  <input type='text' style='display:none;' name='returnURL' value='http&#x3a;&#x2f;&#x2f;training.tritechenterprise.com&#x2f;thank-you.html' /> 
-   <!-- Do not remove this code. -->
-  <style>
-    tr , td { 
-      padding:6px;
-      border-spacing:0px;
-      border-width:0px;
-      }
-  </style>
-  <table style='width:600px;background-color:white;color:black'>
+              <input type='text' style='display:none;' name='returnURL' value='http&#x3a;&#x2f;&#x2f;training.tritechenterprise.com&#x2f;thank-you.html' /> 
+               <!-- Do not remove this code. -->
+              <p>* = required</p>
+              <div class="form-group row">
+                <label for="firstName" class="col-md-4 col-form-label">First Name *</label> 
+                <div class="col-md-8">
+                  <input type='text' class="form-control" name='First Name' id="firstName"/>
+                </div>
+            </div>
 
-  <tr><td colspan='2' style='text-align:left;color:black;font-family:Arial;font-size:14px;'><strong>Customized Training Inquiry</strong></td></tr>
+              <div class="form-group row">
+                <label for="lastName" class="col-md-4 col-form-label">Last Name *</label>
+                <div class="col-md-8">
+                  <input type='text' class="form-control" name='Last Name' id="lastName"/>
+                </div>
+            </div>
 
-  <tr><td  style='nowrap:nowrap;text-align:left;font-size:12px;font-family:Arial;width:200px;'>First Name<span style='color:red;'>*</span></td><td style='width:250px;' ><input type='text' style='width:250px;'  maxlength='40' name='First Name' /></td></tr>
 
-  <tr><td  style='nowrap:nowrap;text-align:left;font-size:12px;font-family:Arial;width:200px;'>Last Name<span style='color:red;'>*</span></td><td style='width:250px;' ><input type='text' style='width:250px;'  maxlength='80' name='Last Name' /></td></tr>
+            <div class="form-group row">
+                <label for="email" class="col-md-4 col-form-label">Email *</label>
+                <div class="col-md-8">
+                  <input type="email" class="form-control" name='Email' id="email"/>
+                  <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                </div>
+            </div>
 
-  <tr><td  style='nowrap:nowrap;text-align:left;font-size:12px;font-family:Arial;width:200px;'>Email<span style='color:red;'>*</span></td><td style='width:250px;' ><input type='text' style='width:250px;'  maxlength='100' name='Email' /></td></tr>
+            <div class="form-group row">
+                <label for="goals" class="col-md-4 col-form-label">What are your training goals? *</label>
+                <div class="col-md-8">
+                  <textarea name='Description' class="form-control" id="goals" rows="5"></textarea>
+                </div>
+            </div>
 
-  <tr><td  style='nowrap:nowrap;text-align:left;font-size:12px;font-family:Arial;width:200px;'>What are your training goals&#x3f;<span style='color:red;'>*</span> </td><td> <textarea name='Description' maxlength='1000' style='width:250px;'>&nbsp;</textarea></td></tr>
+              
+            <div class="form-group row">
+                <label for="phone" class="col-md-4 col-form-label">Phone</label>
+                <div class="col-md-8">
+                  <input class="form-control" type="tel" name='Phone' id="phone"/>
+                </div>
+            </div>
 
-  <tr><td  style='nowrap:nowrap;text-align:left;font-size:12px;font-family:Arial;width:200px;'>Phone</td><td style='width:250px;' ><input type='text' style='width:250px;'  maxlength='30' name='Phone' /></td></tr>
+            <div class="form-group row">
+                <label for="company" class="col-md-4 col-form-label">Company</label>
+                <div class="col-md-8">
+                  <input type='text' class="form-control" name='Company' id="company"/>
+                </div>
+            </div>
 
-  <tr><td  style='nowrap:nowrap;text-align:left;font-size:12px;font-family:Arial;width:200px;'>Company</td><td style='width:250px;' ><input type='text' style='width:250px;'  maxlength='100' name='Company' /></td></tr>
+            <div class="form-group row">
+              <div class="offset-col-md-4 col-md-8">
+                <button type="submit" class="btn btn-primary text-uppercase">Submit</button>
+              </div>
+            </div>
+              
+              </form>
+            </div>                
+              
+        </div>   
+        <div class="col-md-4 course-body">
 
-  <tr><td colspan='2' style='text-align:center; padding-top:15px;'>
-    <input style='font-size:12px;color:#131307' type='submit' value='Submit' />
-    <input type='reset' style='font-size:12px;color:#131307' value='Reset' />
-      </td>
-  </tr>
-   </table>
-  <script>
+          <h2>What you can expect</h2>
+
+          <p>We offer customized training to fit your schedule and location needs. Our trainers will come to the location of your choice, or you can choose from one of our premier locations. Discounts are available for group purchases.</p>
+
+        </div>         
+    </div>
+    <div class="container ending">
+      <footer>
+        <div class="col-md-12"><img src="assets/images/tritech_logo_gray.png" class="imprint" width="87"/> <br />
+        <small>Email: tritech@tritechenterprise.com Office: 301-918-8250 Fax: 301-918-8253 <br />
+        &copy; TriTech Enterprise Systems, Inc. 95 Office Park, 1869 Brightseat Road Hyattsville, Maryland 20785</small>
+        </div>
+      </footer>
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="assets/js/ie10-viewport-bug-workaround.js"></script>
+    <script src="assets/js/ga.js"></script>
+
+    <script>
     var mndFileds=new Array('First Name','Last Name','Email','Description');
     var fldLangVal=new Array('First Name','Last Name','Email','What are your training goals?');
     var name='';
@@ -403,49 +450,5 @@
        }
      
 </script>
-  </form>
-</div>              </div>
-              </div>
-              <!-- Place this where you want the widget to appear -->
-              
-              <!--<form action="" method="post">
-              <div class="row">
-                <input type="radio" name="registration" id="early-bird" value="early-bird"> <label for="early-bird">Early Bird - $799</label> <em>Sold Out</em><br />
-                <input type="radio" name="registration" id="non-profit" value="non-profit"> <label for="non-profit">Non-Profit/Education - $899</label><br />
-                <input type="radio" name="registration" id="professional" value="professional" checked="checked"> <label for="professional">Professional - $999</label><br />
-                
-              </div>
-              </form>-->
-            </div>
-        </div>    
-        <div class="col-md-4 course-body">
-          <!--<p>The Team Kanban Practitioner course teaches the basics of the Kanban Method and serves as the entry level and starting point to an “alternative path to agility.”</p>-->
-
-          <h2>What you can expect</h2>
-
-          <p>We offer customized training to fit your schedule and location needs. Our trainers will come to the location of your choice, or you can choose one of our premier locations. <br />Discounts are available for group purchases.</p>
-
-          <p>Within a month after attending the program, you will have a one-on-one follow-up session with a TriTech Kanban Coaching Professional. He or she will help you maximize the momentum and energy generated during the program. Together, you will discuss how to apply and integrate the concepts you learned.</p>
-        </div>         
-    </div>
-    <div class="container ending">
-      <footer>
-        <div class="col-md-12"><img src="assets/images/tritech_logo_gray.png" class="imprint" width="87"/> <br />
-        <small>Email: tritech@tritechenterprise.com Office: 301-918-8250 Fax: 301-918-8253 <br />
-        &copy; TriTech Enterprise Systems, Inc. 95 Office Park, 1869 Brightseat Road Hyattsville, Maryland 20785</small>
-        </div>
-      </footer>
-    </div> <!-- /container -->
-
-
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="assets/js/ie10-viewport-bug-workaround.js"></script>
-    <script src="assets/js/ga.js"></script>
   </body>
 </html>
