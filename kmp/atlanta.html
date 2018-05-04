@@ -1,0 +1,538 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="assets/js/egg.js"></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="http://tritechenterprise.com/wp-content/uploads/2017/02/icon-75x75.png" sizes="32x32" />
+    <link rel="icon" href="http://tritechenterprise.com/wp-content/uploads/2017/02/icon.png" sizes="192x192" />
+
+    <title>Kanban System Design Training from TriTech Enterprise Systems, Inc.</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="../assets/css/jumbotron.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="../assets/js/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <link href="https://fonts.googleapis.com/css?family=Droid+Serif|Merriweather|Playfair+Display|Vollkorn" rel="stylesheet">
+    <style type="text/css">
+    	body {
+    		/*border-top:5px solid #083B84;*/
+        padding: 0;
+    	}
+
+    	h1, h2 {
+        font-weight:bold;
+    		/*font-family: 'Playfair Display', serif;
+    		
+    		font-family: 'Vollkorn', serif;
+			font-family: 'Merriweather', serif;
+			font-family: 'Droid Serif', serif;
+
+			*/
+    	}
+
+      h5 {
+        text-decoration: underline;        
+      }
+
+@media (min-width: 768px) {
+    .navbar .navbar-nav {
+        display: inline-block;
+        float: none;
+        vertical-align: top;
+    }
+
+    .navbar .navbar-collapse {
+        text-align: center;
+    }
+}
+
+    	.tesi-navbar {
+    		background-color: #E7E6E6;
+    		margin-top: 30px;
+    	}
+
+      .kmp-atlanta-midtown {
+        background:url("../assets/images/kmp/atlanta-midtown.png") no-repeat;
+        background-size: cover;
+        background-position: center;
+        min-height: 25.4em;
+      }      
+
+    	.modern-management {
+    		background:url("assets/images/background-mm.png") no-repeat;
+    		background-size: cover;
+    		min-height: 25.4em;
+    	}
+
+    	.team-kanban-practitioner {
+    		padding-left:1em;
+  			background:url("assets/images/background-grey-tkp.png") no-repeat;
+  			background-size: cover;
+  			min-height: 25.4em;
+    	}
+
+    	.kanban-system-design {
+			background:url("assets/images/background-ksd.png") no-repeat;
+			background-size: cover;
+			min-height: 25.4em;
+    	}
+
+    	.kanban-cadences {
+    		padding-right:1em;
+			background:url("assets/images/background-kc.png") no-repeat;
+			background-size: cover;
+			min-height: 25.4em;
+    	}
+
+      .kanban-grey-cadences {
+    		padding-right:1em;
+			background:url("assets/images/background-grey-kc.png") no-repeat;
+			background-size: cover;
+			min-height: 25.4em;
+    	}
+
+    	.customized-training {
+			background:url("assets/images/background-customized.png") no-repeat;
+			background-size: cover;
+			min-height: 25.4em;
+    	}
+
+    	.inverted {
+    		color:#fff;
+    	}
+
+    	.vertical-align {
+		    display: flex;
+		    align-items: center;
+		}
+
+    .align-bottom {
+      display: inline-block;
+      vertical-align: bottom;
+      float: none;
+    }
+
+    .vertical-align-bottom-left {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+
+    .relative {
+      position:relative;
+    }
+
+		.course-description {
+      /* position: relative; */
+			/*
+			display:flex;
+			align-items:center;
+			*/
+		}
+
+		.courses p {
+			font-size: 1.25em;
+		}
+
+		.ending {
+			background: #f1f1f1;
+			padding: 4em;
+		}
+
+		.ending .imprint {
+			padding-bottom: 1em;
+		}
+
+		.navbar {
+			background: #E7E6E6;
+			margin: 1.6em 0 0 0;
+		}
+/*
+		.navbar-toggle
+		{
+		    float:none;
+
+		}
+	*/
+		.navbar-header
+		{
+		    text-align:center;
+		    margin: 0 auto;
+		}
+
+		.navbar-header a {
+			margin: auto .25em auto .25em;
+			background: none;
+			color:#083B84;
+			font-weight:bold;
+			font-size:1.15em;
+			border:none;
+		}
+
+		.navbar-header a:hover {
+			background: #767171;
+			color:#fff;
+		}
+
+    .course-body {
+      padding:2em;
+    }
+
+		.border { border:1px solid #000; }
+/*
+
+    .course-listing h1 {
+      text-align:center;
+      padding-bottom:.5em;
+      border-bottom:3px dotted #083B84;
+    }
+    .course-body li {
+      margin:.75em auto .75em auto;
+    }
+
+    .course-listing .btn {
+        width: 10em;
+    }
+
+    .course-listing .btn-primary{
+        text-transform: uppercase;
+    }
+
+    .course-listing .disabled {
+        font-style: italic;
+        font-weight: bold;
+        color: #000;
+        background-color: #f1f1f1;
+    }
+
+    .course-details {
+      margin-top:.75em;
+      margin-bottom:1em;
+    }
+
+    .course-venue {
+        padding-right:1em;
+        background:url("assets/images/venues/washingtondc.png") no-repeat;
+        background-size: cover;
+        min-height: 24em;
+    }
+
+    .course-listing {
+        margin-top:1em;
+        font-size:1.25em;
+    }
+
+    .course-prices {
+      border-top: 2px dotted #ccc;
+      font-size:1.3em;
+      color:#7F7F7F;
+      min-height:2.25em;
+    }
+
+    .washington-dc h2{
+        color:#fff;
+    }
+
+    .course-venue-details, .price{
+      text-align: right;
+      color:#000;
+    }
+
+    .course-prices {
+
+    }
+
+    .course-prices .first {
+      border-top: none;
+    }
+
+    .course-price {
+      border: 1px solid;
+      margin: .2em;
+    }
+*/
+    .course, .course form{
+      background:#ddd;
+      padding:1em;
+    }
+
+    .register {
+      margin-top:1em;
+      font-size:4.5em;
+      border-radius: 20px;
+      padding:.4em auto .4em auto;
+    }
+
+    .right {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+
+    .trainer-bio {
+      min-height:200px;
+    }
+
+    .trainer-headshot {
+      float: left;
+      margin-right: 3em;
+      width:200px;
+      height:200px;
+      border: 1px solid #000;
+    }
+
+    .center {
+      text-align:center;
+    }
+
+    .fit {
+      width: 80%;
+      margin: 15%;
+    }
+
+    </style>
+  </head>
+
+  <body id="index">
+    <!--
+    <div class="container text-center"><img src="../assets/images/kmp/atlanta-midtown.png" width="200px" alt="Get Your KMP in Atlanta August 13 – 16, 2018"/></div>
+
+    <nav class="navbar vertical-align text-center">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="btn btn-default" href="http://training.tritechenterprise.com/" role="button">Training Services
+      </a>
+
+      <a class="btn btn-default" href="http://training.tritechenterprise.com/team-kanban-practitioner.html" role="button">Practitioner Development
+      </a>
+
+      <a class="btn btn-default" href="http://training.tritechenterprise.com/kanban-system-design.html" role="button">Kanban System Design
+      </a>
+
+      <a class="btn btn-default" href="http://training.tritechenterprise.com/kanban-management-professional.html" role="button">Kanban Management Professional
+      </a>
+
+      <a class="btn btn-default" href="http://training.tritechenterprise.com/customized-training.html" role="button">Customized Training
+      </a>
+
+        </div>
+    </nav>
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <!--<div class="jumbotron">-->
+    <div class="container text-center background-fill kmp-atlanta-midtown vertical-align">
+    </div>
+    <!--</div>-->
+
+    <div class="container course-description">
+      <div class="row">
+  			<div class="col-md-8 course-body">
+          <h1>Kanban Management Professional Training</h1>
+          <h3>August 13 – 16, 2018</h3>
+
+
+          <p>Join your colleagues as you begin or enhance your Kanban knowledge by learning how to start your own Kanban initiative within your business, gain advanced design concepts used in Kanban systems, and discover how to get more out of your existing Kanban system using advanced management techniques.</p>
+
+          <p>Kanban System using the method’s cadences. Make data-based decisions to improve your team or organizational performance. Understand how set policies to establish and improve quality, performance, agility, predictability, and enable evolutionary change.</p>
+
+          <h2>You Will Learn</h2>
+
+          <h3>How to design Kanban Systems</h3>
+          <ul>
+            <li>Understand what really goes into a Kanban System including policies, types of work, service levels, cadences, and more.</li>
+            <li>Discover what a pull-based system really is about and how to make good decisions when operating a Kanban system.</li>
+            <li>Develop a clear understanding of the metrics used when reviewing the performance of a Kanban system and how they indicate risk as well as future performance.</li>
+            <li>Learn how to use Systems Thinking Applied to Implementing Kanban (STATIK) as an approach to designing and implementing Kanban systems.</li>
+            <li>Discover how a Kanban Systems feels and works through a hands-on simulation.</li>
+            <li>Learn from real case studies how Kanban systems are built in the field as well as the myriad of approaches you can take to design and roll out your own Kanban System.</li>
+          </ul>
+
+          <h3>How to manage Kanban Systems</h3>
+          <ul>
+            <li>Improve agility with asymmetrical commitment.</li>
+            <li>Learn how to utilize the Kanban cadences to grow, evolve, and improve your Kanban system for continuous improvement and sustainable customer satisfaction.</li>
+            <li>Learn how to use the Kanban metrics to make informed decisions and succesfull customer commitments.</li>
+            <li>Set policies to establish and improve quality, performance, agility predictability, and enable evolutionary change.</li>
+            <li>Understand how to utilize the Kanban Method to establish a culture of evolutionary change and service orientation.</li>
+          </ul>
+
+        <h2>You Will Receive</h2>
+        <ul>
+          <li><a href="http://leankanban.com/kmp-program/">Kanban Management Professional</a> credential from Lean Kanban University</li>
+          <li>Print version of classroom workbook</li>
+          <li>Digital version of the slides presented</li>
+          <li>David J. Anderson book <a href="https://www.amazon.com/Kanban-Successful-Evolutionary-Technology-Business/dp/0984521402/ref=sr_1_3?ie=UTF8&qid=1525369765&sr=8-3&keywords=kanban">Kanban</a> (digital version)</li>
+          <li>Membership in Lean Kanban University and a listing in the <a href="https://edu.leankanban.com/alumni">LKU Alumni Directory</a></li>
+        </ul>
+
+        <p>This four day course also allows the students to claim 28 Project Management Institute (PMI)&reg; Professional Development Units (PDUs) which can be applied to Project Management Professional (PMP)&reg; and PMI-Agile Certified Practitioner (PMI-ACP)&reg; certifications. PMI, PMP, and PMI-ACP are registered marks of the Project Management Institute, Inc.</p>
+
+
+        <h2>Who Should Attend?</h2>
+        <p>Kanban works across multiple functions of a business as it evolves both technical and non-technical areas; from software development to sales management.</p>
+
+        <p>Previous attendees have been in roles such as:</p>
+          <ul>
+            <li>Senior Managers</li>
+            <li>Program Managers</li>
+            <li>Project Managers</li>
+            <li>Product Managers</li>
+            <li>Business Analysts</li>
+            <li>Software Developers &amp; Testers</li>
+            <li>Agile Coaches &amp; Practitioners (Scrum, SAFe, XP, DSDM)</li>
+            <li>Sales Specialists and Managers</li>
+            <li>Finance Professionals</li>
+            <li>Human Resource Managers</li>
+            <li>Regulated Professionals (Government, Senior Executive Service, Large Electrical Providers)</li>
+          </ul>
+
+  			</div>
+        <div class="col-md-4 course-body center">
+            <img src="../assets/images/seal.jpg" class="fit" />
+            <a href="customized-training.html" class="register btn btn-primary">Register</a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12 course-body center">
+          <a href="customized-training.html" class="register btn btn-primary">Register</a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12 course-body">
+          <h2>Venue and Logistics</h2>
+          <h3>Midtown Atlanta</h3>
+           
+          <img src="../assets/images/kmp/atlanta-midtown-streetview.jpg" style="width:400px;margin:2em;float:right;" />
+
+          <address>NextGear Solutions<br />
+          <a href="">1201 Peachtree Street NE<br />
+          Building 400, Suite 1730<br />
+          Atlanta, GA 30361</a><br />
+          </address>
+
+          <h4>Getting to the Venue</h4>
+
+          <h5>MARTA From Hartsfield-Jackson Airport</h5>
+          <ul>
+            <li>Take the MARTA Gold or Red Line Train (12 stops) Northbound toward Doraville + North Springs</li>
+            <li>Exit at Arts Center Station and follow signs for Peachtree St. / West Peachtree St.</li>
+            <li>Walk .3 mi and arrive at 1197 Peachtree Street NE. You're here when you see the #IAMMidtown Letters</li>
+          </ul>
+
+          <h5>MARTA from North Springs</h5>
+          <ul>
+            <li>Take the MARTA Red Line (5 stops) Southbound toward Airport</li>
+            <li>EXIT at Arts Center Station and follow signs for Peachtree St. / West Peachtree St.</li>
+            <li>Walk .3 mi and arrive at 1197 Peachtree Street NE. You're here when you see the Midtown Letters</li>
+          </ul>
+
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3315.976168456321!2d-84.38945724976266!3d33.78711358058402!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88f5045b68c6ec79%3A0x1f14b8c234358965!2sOne+Atlantic+Center%2C+1201+Peachtree+St+NE+Building+400%2C+Suite+1730%2C+Atlanta%2C+GA+30309!5e0!3m2!1sen!2sus!4v1525436893513" width="400" height="250" frameborder="0" style="border:0;float:right;margin:3em;" allowfullscreen></iframe>
+          
+          <h5>From I-85S</h5>
+          <p>Take I-85S to Techwood Dr. NW (Exit 84) turn left onto 14th St NW. Turn left onto Peachtree St NE.</p>
+
+          <h5>From I-85N</h5>
+          <p>Take I-85N toward 10th/14th Street (Exit 250). Merge onto Williams St NW. Turn right onto 14th St NW. Turn left onto Peachtree St. NE.</p>
+
+          <h5>Parking &amp; Entrance</h5>
+          <p>Paid parking is in the basement of Building 400. The parking entrance is at the front of the building on Peachtree St.
+          Entrances to Colony Square parking are located in front of the complex on Peachtree Street as well as on 14th Street and 15th St. The garage is open 24 hours a day, 7 days a week.</p>
+
+          <h4>Logisitics</h4>
+
+          <h5>Internet</h5>
+          WiFi will be provided.
+
+          <h5>Meals and Refreshments</h5>
+          <p>Meals are not provided. Refreshments include a continental breakfast followed by afternoon coffee, water, and light snacks.</p>
+
+          <h5>Schedule</h5>
+          <p>Class begins at 8:30 AM and ends at 4:30 PM. There will be a 1 hour lunch break around 12 pm.</p>
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12 course-body center">
+          <a href="customized-training.html" class="register btn btn-primary">Register</a>
+        </div>
+    </div>    
+    <div class="row">
+        <div class="col-md-12 course-body">
+            <h2>About Your Trainers</h2>
+             
+            <h3>Jeremy Pullen</h3>
+            <img src="../assets/images/trainers/pullen.png" class="trainer-headshot" />
+            <p class="trainer-bio">Jeremy Pullen has been building high reliability software and hardware systems for over 23 years and leading Lean/Agile teams since 2003. He started one of the first Scrum projects in Cisco System in 2006 and has led large-scale distributed software development for Radiant Systems, Cisco Systems, Carestream Healthcare, and Honeywell in roles of software development manager, chief architect, chief product owner, global director of software, and chief agile coach. Jeremy currently leads <a href="https://polodis.com/wp/">Polodis</a>, a training and consulting business helping companies build safe and delightful software in high assurance and regulated industries. He holds a degree in Electrical Engineering and a Minor in Economics from Georgia Tech.</p>
+             
+            <h3>Joey Spooner</h3>
+            <img src="../assets/images/trainers/spooner.png" class="trainer-headshot" />
+            <p class="trainer-bio">Joey Spooner is an Accredited Kanban Trainer and Kanban Coaching Professional at TriTech Enterprise Systems, Inc. In a 16-year career spanning the communications, insurance, higher education, non-profit, and government sectors, Joey has been a software developer, IT director, strategic analyst, and technical expert. He blogs at <a href="https://www.spoonstein.com/">Spoonstein</a> and tweets as <a href="https://twitter.com/spoonstein">@spoonstein</a>. Joey holds a Bachelors in Business Administration from the most excellent University of Florida.</p>
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12 course-body center">
+          <a href="customized-training.html" class="register btn btn-primary">Register</a>
+        </div>
+    </div>    
+    <div class="row">
+        <div class="col-md-12 course-body">
+
+            <h2>Training Brought To You By</h2>
+             
+            <h3>TriTech Enterprise Systems, Inc.</h3>
+             
+            <h3>Polodis, Inc.</h3>
+            <p>Polodis is a DevSecOps product and services firm that helps companies implement mature security and governance practices into their end-to-end software and hardware development process, deployment process, and supply chain.</p>
+             
+            <h3>NextGear Solutions, Inc.</h3>
+            <p>We believe in working with passion in all that we set out to do. We are passionate about our work, our clients, and our industry. We are passionate about delivering world-class service, a level of service that reaches far beyond the bounds of traditional. We are passionate about our people as it is their undying determination that has made us the leaders we are today.</p>
+
+
+        </div>
+    </div>    
+    <div class="container ending">
+      <footer>
+        <div class="col-md-12"><img src="../assets/images/tritech_logo_gray.png" class="imprint" width="87"/> <br />
+        <small>Email: tritech@tritechenterprise.com Office: 301-918-8250 Fax: 301-918-8253 <br />
+        &copy; TriTech Enterprise Systems, Inc. 95 Office Park, 1869 Brightseat Road Hyattsville, Maryland 20785</small>
+        </div>
+      </footer>
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="../assets/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../assets/js/ie10-viewport-bug-workaround.js"></script>
+    <script src="../assets/js/ga.js"></script>
+  </body>
+</html>
